@@ -1,1 +1,24 @@
 second file
+https://codeshare.io/Jb9jwR
+
+
+A-4
+FROM ubuntu
+RUN apt update
+RUN apt install apache2 -y
+ENTRYPOINT apachectl -D FOREGROUND
+    
+A-5
+   25  sudo nano Dockerfile
+   26  sudo nano index.html
+   27  ls
+   28  sudo nano Dockerfile
+   29  sudo docker build . -t assignment5
+   30  sudo docker images
+   31  sudo docker run -itd -p 83:80 assignment5
+   
+FROM ubuntua
+RUN apt update
+RUN apt install apache2 -y
+ADD index.html /var/www/html/
+ENTRYPOINT apachectl -D FOREGROUND
